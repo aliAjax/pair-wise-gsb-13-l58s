@@ -1,23 +1,10 @@
 {
-  "name": "dfwlfront-7",
+  "name": "gas-shift-handover",
   "private": true,
-  "version": "0.1.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "加油站班次交接：班中调价按价格段拆账、泵码接续校验、长短款原因复核、冻结凭证订正留痕。零依赖、零构建。",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@vitejs/plugin-vue": "^6.0.1",
-    "vite": "^7.1.5",
-    "typescript": "~5.9.2",
-    "vue": "^3.5.21",
-    "pinia": "^3.0.3",
-    "element-plus": "^2.10.7",
-    "naive-ui": "^2.42.0",
-    "echarts": "^5.6.0",
-    "leaflet": "^1.9.4"
-  },
-  "devDependencies": {}
+    "start": "node server.js",
+    "test": "node --check js/rules.js && node --check js/storage.js && node --check js/app.js && node test/rules.test.js"
+  }
 }
